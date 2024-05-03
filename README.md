@@ -1,3 +1,5 @@
+![logo](media/logo.jpg)
+
 # LizardBolt
 
 The LizardBolt is a cell phone made from a Raspberry Pi.
