@@ -1,4 +1,4 @@
-![logo](media/logo.jpg)
+![logo](media/logo_256_256.jpg)
 
 # LizardBolt
 
