@@ -44,9 +44,13 @@ sudo ./LCD5-show
 
 TODO
 
-### Microphone
+### Audio (output)
 
-TODO
+Plug in any pair of headphones into your Pi's 3.5mm jack.
+
+### Microphone (input)
+
+TODO USB
 
 ### Cellular
 
