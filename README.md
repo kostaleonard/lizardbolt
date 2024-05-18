@@ -44,11 +44,15 @@ sudo ./LCD5-show
 
 TODO
 
+### Microphone
+
+TODO
+
 ### Cellular
 
 TODO
 
-### Case
+### Case and form factor
 
 TODO
 
