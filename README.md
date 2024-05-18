@@ -12,6 +12,7 @@ I have organized this repository as a minimal guide for reproducing the work.
 * [Elecrow 5 inch Raspberry Pi touch display](https://www.elecrow.com/hdmi-5-inch-800x480-tft-display-for-raspberry-pi-b-p-1384.html)
 * [Rii Mini Bluetooth Keyboard](http://www.riitek.com/product/259.html)
 * [SIM800C USB to GSM Module](https://www.amazon.com/dp/B0B64X81LD?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+* A pair of headphones that use a 3.5mm jack
 
 ## Assembly
 
