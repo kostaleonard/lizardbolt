@@ -59,8 +59,10 @@ Reference the following design document throughout this process: [SIM800C_Hardwa
 I am a software engineer, not an electrical engineer, so I can only make a guess at some of the meaning.
 Still, I found it informative.
 
+You can also check out the [SIM800C Series AT Command Manual V1.01](https://www.digikey.jp/htmldatasheets/production/1833952/0/0/1/sim800-series-at-command-manual.html) for more information on available AT commands.
+
 1. Plug the SIM800C USB to GSM Module into one of the USB ports. I plugged into the bottom center port. You should see a new entry in `/dev/`. Mine was `/dev/ttyUSB0`. You should also see a flashing LED on the board. For me, the LED appeared to be flashing at 64ms on, 800ms off, which appears to correspond with the "Not registered the network" state in Table 21. Intuitively this makes sense to me since I haven't yet put in the SIM card or sent commands to the device.
-2. 
+2. Run [`gsm_hello_world.py`](lizardbolt/gsm_hello_world.py) to test your connection. At this point, you just want to make sure you get back "OK" when you send "AT".
 
 ### Case and form factor
 
