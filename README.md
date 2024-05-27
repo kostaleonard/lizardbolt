@@ -11,8 +11,9 @@ I have organized this repository as a minimal guide for reproducing the work.
 * [Raspberry Pi 4B](https://www.raspberrypi.com/products/raspberry-pi-4-model-b/)
 * [Elecrow 5 inch Raspberry Pi touch display](https://www.elecrow.com/hdmi-5-inch-800x480-tft-display-for-raspberry-pi-b-p-1384.html)
 * [Rii Mini Bluetooth Keyboard](http://www.riitek.com/product/259.html)
-* [SIM800C USB to GSM Module](https://www.amazon.com/dp/B0B64X81LD?psc=1&ref=ppx_yo2ov_dt_b_product_details)
+* [SIM800C USB to GSM Module](https://a.co/d/1KzBXUG)
 * A pair of headphones that use a 3.5mm jack
+* [USB 2.0 mini microphone](https://a.co/d/guWN2m7)
 
 ## Assembly
 
@@ -51,7 +52,14 @@ Plug in any pair of headphones into your Pi's 3.5mm jack.
 
 ### Microphone (input)
 
-TODO USB
+Plug in the USB 2.0 mini microphone.
+Your device should recognize it as a microphone immediately and display a microphone icon in the top right.
+
+You can test your microphone using the `arecord` and `aplay` commands.
+
+1. Run `arecord -l`. You should see your device as an input option. Probably it will be the only option.
+2. Run `arecord hello.wav`. The microphone will now start recording. Say some words into the microphone and press `CTRL-C` when you're done.
+3. Run `aplay hello.way`. It will play back your recording in your headphones.
 
 ### Cellular
 
