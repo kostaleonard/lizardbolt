@@ -55,7 +55,12 @@ TODO USB
 
 ### Cellular
 
-TODO
+Reference the following design document throughout this process: [SIM800C_Hardware_Design_V1.02](https://www.elecrow.com/download/SIM800C_Hardware_Design_V1.02.pdf).
+I am a software engineer, not an electrical engineer, so I can only make a guess at some of the meaning.
+Still, I found it informative.
+
+1. Plug the SIM800C USB to GSM Module into one of the USB ports. I plugged into the bottom center port. You should see a new entry in `/dev/`. Mine was `/dev/ttyUSB0`. You should also see a flashing LED on the board. For me, the LED appeared to be flashing at 64ms on, 800ms off, which appears to correspond with the "Not registered the network" state in Table 21. Intuitively this makes sense to me since I haven't yet put in the SIM card or sent commands to the device.
+2. 
 
 ### Case and form factor
 
