@@ -1,5 +1,7 @@
-"""Tests communication with the SIM800C USM to GSM Module."""
+"""Tests communication with the SIM800C USB to GSM Module."""
 # TODO ChatGPT wrote much of this--rewrite when we have a better understanding of the protocol
+# TODO unit tests, pylint, Black, docstrings
+# TODO rename this module as like "stat" or something and have that as one of three basic command line tools: stat, text, call
 
 import serial
 import time

@@ -46,6 +46,10 @@ sudo ./LCD5-show
 
 TODO
 
+### Fan
+
+TODO do we need a fan?
+
 ### Audio (output)
 
 Plug in any pair of headphones into your Pi's 3.5mm jack.
@@ -59,7 +63,7 @@ You can test your microphone using the `arecord` and `aplay` commands.
 
 1. Run `arecord -l`. You should see your device as an input option. Probably it will be the only option.
 2. Run `arecord hello.wav`. The microphone will now start recording. Say some words into the microphone and press `CTRL-C` when you're done.
-3. Run `aplay hello.way`. It will play back your recording in your headphones.
+3. Run `aplay hello.wav`. It will play back your recording in your headphones.
 
 ### Cellular
 
@@ -74,9 +78,24 @@ You can also check out the [SIM800C Series AT Command Manual V1.01](https://www.
 
 ### Case and form factor
 
-TODO
+TODO current plan:
+
+* Use custom 3D printing service to commission a case. Ask for digital design and keep in git.
+* Case should be foldable so that the keyboard rests on top of the screen but does not touch the screen. Case should snap shut so that it remains shut when carrying. Case should allow a user to hold the device by the keyboard when unfolded (unless this would make the case excessively bulky).
+* Case should expose all of the following I/O ports:
+  * USB 2.0 and 3.0 ports on left side of screen.
+  * RJ-45 Ethernet port next to USB ports.
+  * 3.5mm audio jack on top of screen.
+  * HDMI ports on top of screen (there are 3 mini HDMI ports and one large HDMI port between the Pi and the screen; the center mini HDMI on the Pi and the large HDMI on the screen are connected and do not need to be exposed)
+  * TODO access to phone battery for recharging.
+  * USB-C port on keyboard for recharging.
+* Case should allow the following components to be stored snugly (they should not come out if case is flipped upside down or is in motion) in the case itself:
+  * Stylus.
+  * SIM800C USB to GSM Module.
+* Bottom of case should have logo embedded (coloring depends on pricing, could be completely subdued).
+* Case should have holes for better heat dissipation? Ask electrical engineers.
+* Case should be black or steel gray.
 
 ## References
 
 * [PiPhone](https://github.com/climberhunt/PiPhone)
-
