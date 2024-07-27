@@ -14,6 +14,7 @@ I have organized this repository as a minimal guide for reproducing the work.
 * [SIM800C USB to GSM Module](https://a.co/d/1KzBXUG)
 * A pair of headphones that use a 3.5mm jack
 * [USB 2.0 mini microphone](https://a.co/d/guWN2m7)
+* [Gigastone MP-5000 magnetic wireless power bank](https://www.gigastone.com/en/products/magnetic-wireless-power-bank-5000mah-portable-magnetic-charger-for-iphone-1314-series)
 
 ## Assembly
 
@@ -21,7 +22,6 @@ I have organized this repository as a minimal guide for reproducing the work.
 
 1. Use the [Raspberry Pi Imager](https://www.raspberrypi.com/software/) to install a clean OS image on your SD card. I used 64 bit Raspbian.
 2. Attach an HDMI monitor (not the 5 inch display since that will take some configuration), mouse, and keyboard to the Pi, turn it on, and follow the initial setup instructions.
-3. Pair the Bluetooth keyboard with the Pi. You can do this step at any time, whenever you're ready to stop using your USB keyboard.
 
 ### Display
 
@@ -44,11 +44,15 @@ sudo ./LCD5-show
 
 ### Battery
 
-TODO
+Use any 5V, 3A battery pack or portable phone charger.
+I used the Gigastone MP-5000 magnetic wireless power bank, linked above.
+Many portable phone chargers work just fine and have the right form factor.
+They also have a USB-C port and a USB-C to USB-C cable that you can easily connect to the Pi.
 
-### Fan
+### Keyboard
 
-TODO do we need a fan?
+Pair the Bluetooth keyboard with the Pi.
+You can do this step at any time, whenever you're ready to stop using your USB keyboard.
 
 ### Audio (output)
 
@@ -66,6 +70,8 @@ You can test your microphone using the `arecord` and `aplay` commands.
 3. Run `aplay hello.wav`. It will play back your recording in your headphones.
 
 ### Cellular
+
+TODO update and complete
 
 Reference the following design document throughout this process: [SIM800C_Hardware_Design_V1.02](https://www.elecrow.com/download/SIM800C_Hardware_Design_V1.02.pdf).
 I am a software engineer, not an electrical engineer, so I can only make a guess at some of the meaning.
