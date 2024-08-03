@@ -6,7 +6,7 @@
 import serial
 import time
 
-GSM_PORT = "/dev/ttyUSB0"
+SERIAL_PORT = "/dev/ttyUSB3"
 BAUD_RATE = 115200
 TIMEOUT = 1
 
@@ -22,8 +22,8 @@ def send_command(ser, command, wait_time=1):
 def main():
     try:
         # Open serial port
-        ser = serial.Serial(GSM_PORT, BAUD_RATE, timeout=TIMEOUT)
-        print(f"Connected to {GSM_PORT} at {BAUD_RATE} baud.")
+        ser = serial.Serial(SERIAL_PORT, BAUD_RATE, timeout=TIMEOUT)
+        print(f"Connected to {SERIAL_PORT} at {BAUD_RATE} baud.")
 
         # Test AT command communication
         print("Sending AT command to test communication...")

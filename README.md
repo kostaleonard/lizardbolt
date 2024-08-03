@@ -73,6 +73,24 @@ You can test your microphone using the `arecord` and `aplay` commands.
 
 TODO update and complete
 
+TODO note above in purchasing info that in EG25-G, the suffix is for region code. Presumably, G means global, AF means Africa or something. Ask ChatGPT for clarification.
+
+The Quectel EG25-G USB dongle that I purchased came with two extra cables.
+One had two pairs of red and black wires and plugged into the top of the main chip.
+Based on my conversation with ChatGPT, this is a serial cable that you can use as an additional interface with the EG25-G chip.
+You don't need it.
+The other cable was a [2JF1424Pa antenna with an adhesive strip](https://www.2j-antennas.com/media/original/datasheets/2jf1424pa.pdf).
+This is your antenna, although it may not look the part.
+The adhesive strip is just to position the antenna for best signal.
+We don't need to worry about it for right now.
+
+1. Plug the antenna into the EG25-G chip where the board is marked "MAIN" (main antenna). There are also antenna plugs for GPS and "DIV." This last one is for the auxiliary antenna based on the EG25-G product information on Amazon. You don't need to use GPS or DIV.
+2. Plug the EG25-G chip into one of the USB 2.0 ports. The LED on the board should light up. You should see new entries for `/dev/ttyUSB0`, `/dev/ttyUSB1`, `/dev/ttyUSB2`, `/dev/ttyUSB3`. Only one of these interfaces will respond to the cell commands that we are about to send. For me it was `/dev/ttyUSB3`. You may need to change this value in the Python scripts.
+3. Run [`cell_hello_world.py`](lizardbolt/cell_hello_world.py) to test your connection. At this point, you just want to make sure you get back "OK" when you send "AT".
+4.
+
+TODO old stuff below--review for good info, then remove
+
 Reference the following design document throughout this process: [SIM800C_Hardware_Design_V1.02](https://www.elecrow.com/download/SIM800C_Hardware_Design_V1.02.pdf).
 I am a software engineer, not an electrical engineer, so I can only make a guess at some of the meaning.
 Still, I found it informative.
@@ -80,7 +98,7 @@ Still, I found it informative.
 You can also check out the [SIM800C Series AT Command Manual V1.01](https://www.digikey.jp/htmldatasheets/production/1833952/0/0/1/sim800-series-at-command-manual.html) for more information on available AT commands.
 
 1. Plug the SIM800C USB to GSM Module into one of the USB ports. I plugged into the bottom center port. You should see a new entry in `/dev/`. Mine was `/dev/ttyUSB0`. You should also see a flashing LED on the board. For me, the LED appeared to be flashing at 64ms on, 800ms off, which appears to correspond with the "Not registered the network" state in Table 21. Intuitively this makes sense to me since I haven't yet put in the SIM card or sent commands to the device.
-2. Run [`gsm_hello_world.py`](lizardbolt/gsm_hello_world.py) to test your connection. At this point, you just want to make sure you get back "OK" when you send "AT".
+2. Run [`gsm_hello_world.py`](lizardbolt/cell_hello_world.py) to test your connection. At this point, you just want to make sure you get back "OK" when you send "AT".
 
 ### Case and form factor
 
